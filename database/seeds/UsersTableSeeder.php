@@ -11,10 +11,20 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::create([
+        $user = \App\Models\User::create([
             'name' => 'luqman',
             'email' => 'oluwatosinolamilekan@gmail.com',
             'password' => bcrypt('olamilekan11'),
+        ]);
+
+        $user->restaurants()->create([
+            'name' => 'Ajayi Nurudeen',
+            'location' => 'Yaba Lagos Nigeria',
+        ]);
+
+        $user->restaurants()->create([
+            'name' => 'Ajayi Kunle',
+            'location' => 'Lekki Lagos Nigeria',
         ]);
     }
 }

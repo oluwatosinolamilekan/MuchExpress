@@ -27,4 +27,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function restaurants()
+    {
+        return $this->hasMany(Restaurant::class,'owner_id')
+                    ->orderBy('name','asc');
+    }
 }

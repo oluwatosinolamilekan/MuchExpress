@@ -6,8 +6,13 @@
  */
 
 require('./bootstrap');
+require('vue-multiselect/dist/vue-multiselect.min.css');
+
+import VModal from 'vue-js-modal'
+
 
 window.Vue = require('vue');
+Vue.use(VModal)
 
 
 // import VueRouter from 'vue-router'
@@ -19,8 +24,14 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('menu-contanier', require('./modules/menu/MenuContainer.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+/**
+ * Global Component
+ */
+Vue.component('card-component', require('./components/Card.vue').default);
+Vue.component('menu-contanier', require('./modules/menu/MenuContainer.vue').default);
+Vue.component('resto-group', require('./modules/restos/RestoGroup.vue').default);
 
 const app = new Vue({
     el: '#app'

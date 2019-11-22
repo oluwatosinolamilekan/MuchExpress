@@ -11105,3 +11105,12 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.validation-message {
+  color: #e3342f;
+  font-size: 0.9em;
+}
+
+.contanier-padding {
+  padding: 10px;
+}
+
